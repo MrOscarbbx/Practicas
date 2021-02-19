@@ -12,7 +12,7 @@ public class Personaje{
 	}
 	
 	public String getDetalle(){
-		return (nombre+"\t"+String.valueOf(edad));
+		return (nombre+"\t"+edad);
 	}
 	public void setNombre(String nombre){
 		if((nombre.length())>=3 && (nombre.length())<=10){
