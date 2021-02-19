@@ -11,7 +11,7 @@ public class Personaje{
 	}
 	
 	public String getDetalle(){
-		return 
+		return (nombre+"\t"+String.valueOf(edad))
 	}
 	public void setNombre(String nombre){
 		if(Integer.parseInt(nombre)>3 && Integer.parseInt(nombre)<10){
