@@ -1,4 +1,5 @@
-//Inicio 8:50
+//Inicio 7:47
+//Termino 9:51
 package mx.com.softgame.poo1game.personajes;
 
 public class Personaje{
@@ -11,10 +12,10 @@ public class Personaje{
 	}
 	
 	public String getDetalle(){
-		return (nombre+"\t"+String.valueOf(edad))
+		return (nombre+"\t"+String.valueOf(edad));
 	}
 	public void setNombre(String nombre){
-		if(Integer.parseInt(nombre)>3 && Integer.parseInt(nombre)<10){
+		if((nombre.length())>=3 && (nombre.length())<=10){
 			this.nombre=nombre;
 		};
 	}
