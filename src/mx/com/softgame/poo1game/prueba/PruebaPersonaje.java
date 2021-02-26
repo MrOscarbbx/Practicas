@@ -32,8 +32,11 @@ public class PruebaPersonaje{
 			do{
 				if (per04.setEdad(ed)==150) {
 					System.out.println("***BINGO***");
-				}while(per04.setEdad(ed));
-			System.out.println(per04.getDetalle())
+					break outfor;
+				}
+			}while(per04.setEdad(ed));
+				System.out.println(per04.getDetalle());
+			outfor:
 		}
 	}
 }
