@@ -2,8 +2,8 @@
 package mx.com.softgame.poo1game.personajes;
 
 public class Personaje{
-	private String nombre;
-	private int vida;
+	protected String nombre;
+	protected int vida;
 	
 	public Personaje(String nombre, int vida){
 		this.nombre=nombre;
@@ -44,11 +44,13 @@ public class Personaje{
 	public void decVida(){
 		if (vida!=0 && vida>0){
 			vida -= 1;
+		}
 	}
 	public void decVida(int x){
 		if ((vida!=0 && vida>0) && ((vida-x)<0)) {
-			
+			vida -= x;
 		}
-		vida -= x;
+	
 	}
+
 }
