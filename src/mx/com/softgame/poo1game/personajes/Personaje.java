@@ -1,5 +1,4 @@
-//Inicio 7:47
-//Termino 9:51
+//Inicio 7:32
 package mx.com.softgame.poo1game.personajes;
 
 public class Personaje{
