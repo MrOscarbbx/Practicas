@@ -10,8 +10,7 @@ public class Personaje{
 		this.vida=vida;
 	}
 	public Personaje(String nombre){
-		this.nombre=nombre;
-		vida=3;
+		this(nombre,3);
 	}
 	
 	public String getDetalle(){
@@ -47,7 +46,7 @@ public class Personaje{
 		}
 	}
 	public void decVida(int x){
-		if ((vida!=0 && vida>0) && ((vida-x)<0)) {
+		if ((vida!=0 && vida>0) && ((vida-x)>=0)) {
 			vida -= x;
 		}
 	

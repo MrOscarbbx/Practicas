@@ -3,11 +3,10 @@ import mx.com.softgame.poo1game.personajes.Personaje;
 
 public class Planta extends Personaje{
 
-	private String escudo;
+	private char escudo;
 
 	public Planta(String nombre, int vida, char escudo){
-		super nombre=nombre;
-		super vida=vida;
+		super(nombre,vida);
 		this.escudo=escudo;
 	}
 	public Planta(String nombre, char escudo){
@@ -16,7 +15,7 @@ public class Planta extends Personaje{
 	}
 	public Planta(String nombre, int vida){
 		super(nombre,vida);
-		this.escudo='A'
+		this.escudo='A';
 	}
 	public Planta(String nombre){
 		super(nombre,3);
@@ -28,14 +27,14 @@ public class Planta extends Personaje{
 	}
 
 	public void decVida(){
-		if (vida!=0 && vida>0 &&escudo!='A'){
+		if (vida!=0 && vida>0 && escudo!='A'){
 			vida -= 1;
 		}else {
 			vida-= 2;
 		}
 	}
 	public void decVida(int x){
-		if ((vida!=0 && vida>0) && ((vida-x)<0) && escudo!='A') {
+		if ((vida!=0 && vida>0) && ((vida-x)>=0) && escudo!='A') {
 			vida -= x;
 		}else {
 			vida-=2;
@@ -43,7 +42,7 @@ public class Planta extends Personaje{
 	
 	}
 
-	public String getEscudo(){
+	public char getEscudo(){
 		return escudo;
 	}
 }

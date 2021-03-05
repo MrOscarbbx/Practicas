@@ -5,8 +5,7 @@ public class Zombie extends Personaje{
 	private boolean ataque;
 
 	public Zombie(String nombre, int vida, boolean ataque){
-		this.nombre=nombre;
-		this.vida=vida;
+		super(nombre,vida);
 		this.ataque=ataque;
 	}
 	public Zombie(String nombre,boolean ataque){
@@ -35,7 +34,7 @@ public class Zombie extends Personaje{
 		}
 	}
 	public void decVida(int x){
-		if ((vida!=0 && vida>0) && ((vida-x)<0)) {
+		if ((vida!=0 && vida>0) && ((vida-x)>=0)) {
 			if (!ataque) {
 				vida -= (x*3);
 			}else {

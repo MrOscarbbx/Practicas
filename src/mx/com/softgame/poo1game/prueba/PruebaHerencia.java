@@ -30,11 +30,11 @@ public class PruebaHerencia{
 			System.out.println(i.getDetalle());
 			if (i instanceof Planta) {
 				Planta j=(Planta) i;
-				System.out.println("Soy planta"+j.getEscudo());
+				System.out.println("Soy planta "+j.getEscudo());
 			}
 			if (i instanceof Zombie) {
 				Zombie l=(Zombie) i;
-				System.out.println("Soy planta"+l.getAtaque());
+				System.out.println("Soy planta "+l.getAtaque());
 			}
 			int k=(int)(Math.random()*10);
 			i.decVida(k);
