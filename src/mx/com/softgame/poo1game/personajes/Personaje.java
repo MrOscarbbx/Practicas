@@ -10,7 +10,7 @@ public class Personaje{
 		this.vida=vida;
 	}
 	public Personaje(String nombre){
-		this nombre=nombre;
+		this.nombre=nombre;
 		vida=3;
 	}
 	

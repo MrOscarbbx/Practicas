@@ -6,23 +6,20 @@ public class Planta extends Personaje{
 	private String escudo;
 
 	public Planta(String nombre, int vida, char escudo){
-		this.nombre=nombre
-		this.vida=vida;
+		super nombre=nombre;
+		super vida=vida;
 		this.escudo=escudo;
 	}
 	public Planta(String nombre, char escudo){
-		this.nombre=nombre;
-		this.vida=3;
+		super(nombre,3);
 		this.escudo=escudo;
 	}
 	public Planta(String nombre, int vida){
-		this.nombre=nombre;
-		this.vida=vida;
-		this.escudo='A';
+		super(nombre,vida);
+		this.escudo='A'
 	}
 	public Planta(String nombre){
-		this.nombre=nombre
-		this.vida=3;
+		super(nombre,3);
 		this.escudo='A';
 	}
 
