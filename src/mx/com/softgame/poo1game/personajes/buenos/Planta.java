@@ -44,12 +44,12 @@ public class Planta extends Personaje{
 	public boolean equals(Object o){
 		boolean iguales=false;
 		if (o!=null && (o instanceof Planta)) {
-			Panta ej=(Planta) o;
+			Planta ej=(Planta) o;
 			if ((this.nombre==ej.nombre)&&(this.vida==ej.vida)&&(this.escudo==ej.escudo)) {
 				iguales=true;
 			}
-			return iguales;
 		}
+		return iguales;
 	}	
 
 	public char getEscudo(){

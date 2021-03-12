@@ -50,9 +50,7 @@ public class Zombie extends Personaje{
 			if ((this.nombre==ej.nombre)&&(this.vida==ej.vida)&&(this.ataque==ej.ataque)) {
 				iguales=true;
 			}
-			return iguales;
 		}
+		return iguales;
 	}
-
-
 }

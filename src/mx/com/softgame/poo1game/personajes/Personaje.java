@@ -58,8 +58,8 @@ public class Personaje{
 			if ((this.nombre==ej.nombre)&&(this.vida==ej.vida)) {
 				iguales=true;
 			}
-			return iguales;
 		}
+		return iguales;
 	}
 
 }
