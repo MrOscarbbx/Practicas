@@ -1,4 +1,4 @@
-//Inicio 7:32
+//Inicio 7:35
 package mx.com.softgame.poo1game.personajes;
 
 public class Personaje{
@@ -13,7 +13,7 @@ public class Personaje{
 		this(nombre,3);
 	}
 	
-	public String getDetalle(){
+	public String toString(){
 		return (nombre+"\t"+vida);
 	}
 	public void setNombre(String nombre){

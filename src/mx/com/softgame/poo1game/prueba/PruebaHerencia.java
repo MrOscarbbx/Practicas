@@ -37,6 +37,7 @@ public class PruebaHerencia{
 				System.out.println("Soy planta "+l.getAtaque());
 			}
 			int k=(int)(Math.random()*10);
+			System.out.println(k+"\t**");
 			i.decVida(k);
 			System.out.println(i.getDetalle());
 		}
