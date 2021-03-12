@@ -19,7 +19,7 @@ public class Zombie extends Personaje{
 		return ataque;
 	}
 
-	public String getDetalle(){
+	public String toString(){
 		return (nombre+"\t"+vida+"\t"+ataque);
 	}
 
@@ -41,6 +41,16 @@ public class Zombie extends Personaje{
 				vida -= (x*2);
 			}
 			
+		}
+	}
+	public boolean equals(Object o){
+		boolean iguales=false;
+		if (o!=null && (o instanceof Zombie)) {
+			Zombie ej=(Zombie) o;
+			if ((this.nombre==ej.nombre)&&(this.vida==ej.vida)&&(this.ataque==ej.ataque)) {
+				iguales=true;
+			}
+			return iguales;
 		}
 	}
 

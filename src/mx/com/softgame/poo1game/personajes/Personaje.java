@@ -51,5 +51,15 @@ public class Personaje{
 		}
 	
 	}
+	public boolean equals(Object o){
+		boolean iguales=false;
+		if (o!=null && (o instanceof Personaje)) {
+			Personaje ej=(Personaje) o;
+			if ((this.nombre==ej.nombre)&&(this.vida==ej.vida)) {
+				iguales=true;
+			}
+			return iguales;
+		}
+	}
 
 }

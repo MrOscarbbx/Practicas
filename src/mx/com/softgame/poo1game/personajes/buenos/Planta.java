@@ -22,7 +22,7 @@ public class Planta extends Personaje{
 		this.escudo='A';
 	}
 
-	public String getDetalle(){
+	public String toString(){
 		return (nombre+"\t"+vida+"\t"+escudo);
 	}
 
@@ -41,6 +41,16 @@ public class Planta extends Personaje{
 		}
 	
 	}
+	public boolean equals(Object o){
+		boolean iguales=false;
+		if (o!=null && (o instanceof Planta)) {
+			Panta ej=(Planta) o;
+			if ((this.nombre==ej.nombre)&&(this.vida==ej.vida)&&(this.escudo==ej.escudo)) {
+				iguales=true;
+			}
+			return iguales;
+		}
+	}	
 
 	public char getEscudo(){
 		return escudo;
