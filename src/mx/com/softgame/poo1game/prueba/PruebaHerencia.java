@@ -5,26 +5,29 @@ import mx.com.softgame.poo1game.personajes.Personaje;
 
 public class PruebaHerencia{
 	public static void main(String[] args) {
-		Personaje per01=new Personaje("Valeria",99);
-		Personaje per02=new Personaje("Octavio");
-		Personaje paln01=new Planta("Wendy",10,'B');
-		Personaje paln02=new Planta("Ricardo",50);
-		Personaje paln03=new Planta("Vania",'C');
-		Personaje paln04=new Planta("Alan");
-		Personaje zom01=new Zombie("Karen",80,false);
-		Personaje zom02=new Zombie("Eduardo",true);
-		Personaje zom03=new Zombie("Esmeralda");
+		Personaje[] personajes={
+			new Personaje("Omar",99),
+			new Planta("Karen",50),
+			new Zombie("Hanna",80,false),
+			new Personaje("Omar",99),
+			new Planta("Karen",50),
+			new Zambie("Hanna",80,false)
+		}
 
-		Personaje[] personajes=new Personaje[9];
-		personajes[0]=per01;
-		personajes[1]=per02;
-		personajes[2]=paln01;
-		personajes[3]=paln02;
-		personajes[4]=paln03;
-		personajes[5]=paln04;
-		personajes[6]=zom01;
-		personajes[7]=zom02;
-		personajes[8]=zom03;
+		int i=0;
+		while (i<personajes.length) {
+			i++;
+			for (Personaje p:personajes) {
+				if (personajes[i].equals(p)) {
+				 	System.out.println(personajes[i]+" es igual a "+p+", son diferentes Objetos");
+				 	break;
+				 }
+				if (personajes[i]==p) {
+					System.out.println(personajes[i]+" es identico a "+p+", son el mismo Objeto");
+					break;
+				System.out.println(personajes[i]+" != "+p);
+			}
+		}
 
 		for (Personaje i:personajes) {
 			System.out.println(i.getDetalle());
