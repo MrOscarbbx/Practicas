@@ -1,5 +1,6 @@
 package mx.com.softgame.poo1game.personajes.buenos;
 import mx.com.softgame.poo1game.personajes.Personaje;
+import mx.com.softgame.poo1game.utils.*;
 
 public class Planta extends Personaje{
 
@@ -45,7 +46,7 @@ public class Planta extends Personaje{
 		boolean iguales=false;
 		if (o!=null && (o instanceof Planta)) {
 			Planta ej=(Planta) o;
-			if ((this.nombre==ej.nombre)&&(this.vida==ej.vida)&&(this.escudo==ej.escudo)) {
+			if ((this.equals(ej))&&(this.escudo==ej.escudo)) {
 				iguales=true;
 			}
 		}
@@ -54,5 +55,9 @@ public class Planta extends Personaje{
 
 	public char getEscudo(){
 		return escudo;
+	}
+	public String getIdVida(){
+		return Utileria.getID()+" "+vida+" "+escudo;
+		// ERROR: getIdVida() in Planta cannot override getIdVida() in Personaje
 	}
 }
