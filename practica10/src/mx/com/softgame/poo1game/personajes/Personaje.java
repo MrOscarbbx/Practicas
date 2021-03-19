@@ -5,18 +5,19 @@ import mx.com.softgame.poo1game.utils.*;
 public class Personaje{
 	protected String nombre;
 	protected int vida;
-	private final int ID;
+	private final int id;
 	
 	public Personaje(String nombre, int vida){
 		this.nombre=nombre;
 		this.vida=vida;
+		id=Utileria.getID();
 	}
 	public Personaje(String nombre){
 		this(nombre,3);
 	}
 	
 	public String toString(){
-		return (nombre+"\t"+vida);
+		return (id+"\t"+nombre+"\t"+vida);
 	}
 	public void setNombre(String nombre){
 		if((nombre.length())>=3 && (nombre.length())<=10){
@@ -62,6 +63,9 @@ public class Personaje{
 			}
 		}
 		return iguales;
+	}
+	public final String getIdVida(){
+		return id+"\t"+vida;
 	}
 
 }

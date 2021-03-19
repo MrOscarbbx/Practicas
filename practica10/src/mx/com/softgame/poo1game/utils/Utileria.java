@@ -1,10 +1,12 @@
+package mx.com.softgame.poo1game.utils;
+
 public class Utileria{
-	public static int contador=0;
-	
+	private static int contadorID=0;
+
 	private Utileria(){
 		contadorID++;
 	}
-	public static getID(){
+	public static int getID(){
 		return contadorID;
 	}
 }
