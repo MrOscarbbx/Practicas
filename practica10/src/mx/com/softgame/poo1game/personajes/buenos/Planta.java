@@ -56,8 +56,12 @@ public class Planta extends Personaje{
 	public char getEscudo(){
 		return escudo;
 	}
+
+	/*
 	public String getIdVida(){
 		return Utileria.getID()+" "+vida+" "+escudo;
 		// ERROR: getIdVida() in Planta cannot override getIdVida() in Personaje
 	}
+	*/
+
 }
