@@ -13,18 +13,19 @@ public class PruebaHerencia{
 			new Planta("Karen",50),
 			new Zombie("Hanna",80,false)
 		};
+		System.out.println(personajes[3].getIdVida());
 
 		int i=0;
 		while (i<personajes.length) {
-			reg:
+			System.out.println("----------------");
 			for (Personaje p:personajes) {
 				if (personajes[i]==p) {
 					System.out.println("***"+personajes[i]+" es identico a "+p+", son el mismo Objeto***");
-					continue reg;
+					continue;
 				}
 				if (personajes[i].equals(p)) {
 					System.out.println("**"+personajes[i]+" es igual a "+p+", son diferentes Objetos**");
-				 	continue reg;
+				 	continue;
 				}
 				System.out.println(personajes[i]+" != "+p);
 				}

@@ -21,7 +21,7 @@ public final class Zombie extends Personaje{
 	}
 
 	public String toString(){
-		return (nombre+"\t"+vida+"\t"+ataque);
+		return (super.toString()+"{"+ataque+"}");
 	}
 
 	public void decVida(){
