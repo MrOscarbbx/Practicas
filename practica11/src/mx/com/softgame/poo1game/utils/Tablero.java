@@ -10,15 +10,16 @@ public class Tablero{
 	}
 
 	public static boolean addPersonaje(Personaje p){
-		if (idx>0&&idx<MAX_LINE) {
-			idx++;
+		idx++;
+		if (idx>=0&&idx<MAX_LINE) {
 			personajes[idx]=p;
 			return true;
-		}
+		}else{idx--;}
 		return false;
 	}
 		public static boolean delPersonaje(){
-		if (idx>0&&idx<MAX_LINE) {
+		if ((idx-1)>0 && (idx-1)<MAX_LINE){
+			personajes[idx]=null;
 			idx--;
 			return true;
 		}
