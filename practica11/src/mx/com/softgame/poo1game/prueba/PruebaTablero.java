@@ -19,7 +19,17 @@ public class PruebaTablero{
 			new Planta("Carlos",10),
 			new Zombie("Cristian",20,false),
 			new Planta("Oscar",40)
+		};
+		for (Personaje p:arr) {
+			if(!Tablero.addPersonaje(p))
+				System.out.println("No pudo ser insertado");
 		}
-		
+		Tablero.delPersonaje();
+		Tablero.showAll();
+		for (int i=0; i<15 ;i++) {
+			if(!Tablero.delPersonaje()){
+				System.out.println("No pudo ser eliminado");
+			}
+		}
 	}
 }
