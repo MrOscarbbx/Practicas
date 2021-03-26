@@ -23,6 +23,12 @@ public class Planta extends Personaje{
 		this.escudo='A';
 	}
 
+	public void setNombre(String rr){
+		if (nombre.length()<10 && nombre.length()>5) {
+			this.nombre=nombre;
+		}
+	}	
+
 	public String toString(){
 		return (super.toString()+"{"+escudo+"}");
 	}
@@ -46,7 +52,7 @@ public class Planta extends Personaje{
 		boolean iguales=false;
 		if (o!=null && (o instanceof Planta)) {
 			Planta ej=(Planta) o;
-			if ((super.equals(ej))&&(this.escudo==ej.escudo)) {
+			if ((this.nombre==ej.nombre)&&(this.vida==ej.vida)&&(this.escudo==ej.escudo)) {
 				iguales=true;
 			}
 		}

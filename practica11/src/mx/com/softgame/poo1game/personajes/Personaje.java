@@ -21,6 +21,7 @@ public abstract class Personaje{
 	}
 	public abstract void setNombre(String nombre);
 	// abstract methods cannot have a body
+	
 	public String getNombre(){
 		return nombre;
 	}

@@ -20,6 +20,12 @@ public final class Zombie extends Personaje{
 		return ataque;
 	}
 
+	public void setNombre(String nombre){
+		if (nombre.length()<8 && nombre.length()>3) {
+			this.nombre=nombre;
+		}
+	}	
+
 	public String toString(){
 		return (super.toString()+"{"+ataque+"}");
 	}
