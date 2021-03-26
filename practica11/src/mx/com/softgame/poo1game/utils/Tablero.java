@@ -11,10 +11,10 @@ public class Tablero{
 
 	public static boolean addPersonaje(Personaje p){
 		if (idx>0&&idx<MAX_LINE) {
+			idx++;
 			personajes[idx]=p;
 			return true;
 		}
-		idx++;
 		return false;
 	}
 		public static boolean delPersonaje(){
@@ -27,10 +27,11 @@ public class Tablero{
 
 		public static void showAll(){
 			for (Personaje p:personajes) {
-				if (p!=null) {
-					System.out.println(p.getNombre());
-				}else {
+				if (p==null) {
 					System.out.println("-");
+					
+				}else {
+					System.out.println(p.getNombre());
 				}
 			}
 		}
