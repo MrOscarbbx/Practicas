@@ -17,4 +17,21 @@ public class Tablero{
 		}
 		return false;
 	}
+		public static boolean delPersonaje(Personaje p){
+		if (idx>=0&&idx<MAX_LINE) {
+			idx--;
+			return true;
+		}
+		return false;
+	}
+
+		public void showAll(){
+			for (Personaje p:personajes) {
+				if (p!=null) {
+					System.out.println(p.getNombre());
+				}else {
+					System.out.println("-");
+				}
+			}
+		}
 }
