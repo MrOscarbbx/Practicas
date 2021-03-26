@@ -18,7 +18,7 @@ public class Tablero{
 		return false;
 	}
 		public static boolean delPersonaje(){
-		if ((idx-1)>0 && (idx-1)<MAX_LINE){
+		if ((idx-1)>=-1 && (idx-1)<MAX_LINE){
 			personajes[idx]=null;
 			idx--;
 			return true;
