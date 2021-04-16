@@ -9,21 +9,21 @@ public class Tablero{
 	private Tablero(){
 	}
 
-	public static boolean addPersonaje(Personaje p){
+	public static void addPersonaje(Personaje p) throws TheException{
 		if ((idx+1)>=0&&(idx+1)<MAX_LINE) {
 			idx++;
 			personajes[idx]=p;
-			return true;
+		}else{
+			throw new TheException("No es Posible Agregar el Personaje",idx);
 		}
-		return false;
 	}
-		public static boolean delPersonaje(){
+		public static void delPersonaje()throws TheException{
 		if ((idx-1)>=-1 && (idx-1)<MAX_LINE){
 			personajes[idx]=null;
 			idx--;
-			return true;
+		}else{
+			throw new TheException("No es Posible borrar el Personaje",-1);
 		}
-		return false;
 	}
 
 		public static void showAll(){
