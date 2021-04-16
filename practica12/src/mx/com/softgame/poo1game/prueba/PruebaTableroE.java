@@ -21,11 +21,6 @@ public class PruebaTableroE{
 			new Zombie("Erick",20,false),
 			new Planta("Aline",40)
 		};
-		try{
-		for (Personaje p:arr) {
-			Tablero.addPersonaje(p);
-		}
-		Tablero.delPersonaje();
 		/* COMENTARIO 1:
 		error: unreported exception TheException; must be caught or declared to be thrown
 		-El error sale porque no hemos declarado los metodos para lanzar las excepciones
@@ -33,12 +28,26 @@ public class PruebaTableroE{
 		-Solo sale una linea de salida ya que el try lanza la excepcion inicial, y ya no ejecuta
 			lo demas
 		*/
-		Tablero.showAll();
-		for (int i=0; i<15 ;i++) {
-			Tablero.delPersonaje();
+		for (Personaje p:arr){
+			try{
+				Tablero.addPersonaje(p);
+			}catch(TheException e){
+				System.out.println(e+" "+e.getPoss());
+				}
 			}
-		}catch(TheException e){
+		try{
+			Tablero.delPersonaje();
+			Tablero.showAll();
+		}catch (TheException e) {
 			System.out.println(e+" "+e.getPoss());
+		}
+		
+		for (int i=0; i<15 ;i++){
+			try{
+				Tablero.delPersonaje();
+			}catch(TheException e){
+				System.out.println(e+" "+e.getPoss());
+			}
 		}
 	}
 }
