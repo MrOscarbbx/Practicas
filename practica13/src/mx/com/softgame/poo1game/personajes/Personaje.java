@@ -17,8 +17,14 @@ public abstract class Personaje implements Comparable{
 		if (this.nombre.compareTo(l)!=0){
 			return this.nombre.compareTo(l);
 		} else {
-			return this.vida-o.vida
+			return this.vida-((Personaje)o).vida;
 		}
+	}
+	public int hashCode(){
+		return nombre.hashCode()+vida*7;
+	}
+	public int getId(){
+		return id;
 	}
 	public Personaje(String nombre){
 		this(nombre,3);
