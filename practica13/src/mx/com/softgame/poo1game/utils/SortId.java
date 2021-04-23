@@ -7,7 +7,7 @@ public class SortId implements Comparator {
 		if (com==0) {
 			return 0;
 		}else if (com<1) {
-			return -1;
-		}else{return 1;}
+			return 1;
+		}else{return -1;}
 	}
 }
