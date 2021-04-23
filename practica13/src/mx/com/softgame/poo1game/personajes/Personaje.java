@@ -14,12 +14,10 @@ public abstract class Personaje implements Comparable{
 	}
 	public int compareTo(Object o){
 		String l=((Personaje)o).nombre;
-		if (nombre==l) {
-			return 0;
-		}else if (nombre<l) {
-			return -1
-		} {
-			
+		if (this.nombre.compareTo(l)!=0){
+			return this.nombre.compareTo(l);
+		} else {
+			return this.vida-o.vida
 		}
 	}
 	public Personaje(String nombre){
