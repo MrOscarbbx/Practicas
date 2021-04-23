@@ -2,7 +2,7 @@
 package mx.com.softgame.poo1game.personajes;
 import mx.com.softgame.poo1game.utils.*;
 
-public abstract class Personaje{
+public abstract class Personaje implements Comparable{
 	protected String nombre;
 	protected int vida;
 	private final int id;
@@ -11,6 +11,16 @@ public abstract class Personaje{
 		this.nombre=nombre;
 		this.vida=vida;
 		id=Utileria.getID();
+	}
+	public int compareTo(Object o){
+		String l=((Personaje)o).nombre;
+		if (nombre==l) {
+			return 0;
+		}else if (nombre<l) {
+			return -1
+		} {
+			
+		}
 	}
 	public Personaje(String nombre){
 		this(nombre,3);
