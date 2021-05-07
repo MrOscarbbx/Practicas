@@ -29,16 +29,20 @@ public class VentanaPrincipal{
 		f.add(lblFile);
 		f.add(txtFile);
 		f.add(btnOpen);
-		btnOpen.addMouseListener(new MouseListener() {
-			public void mouseClick(MouseEvent e) {
-				e.openFile();
+		btnOpen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent a) {
+				openFile();
 			}
 		});
 		f.add(txtContenido);
 		f.add(lblLeidos);
 		f.add(lblN);
 		f.add(btnExit);
-		btnExit.addActionListener(dispose());
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent a) {
+				f.dispose();
+			}
+		});
 		f.setSize(550, 440);
 		f.pack();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -53,16 +57,14 @@ public class VentanaPrincipal{
 		String file=txtFile.getText();
 		String path= System.getProperty("user.home")+System.getProperty("file.separator")+file;
 		System.out.println(path);
-		txtContenido.setText();
+		txtContenido.setText("");
 		File archivo=new File(path);
 		if (!archivo.exists()) {
-			JOptonPane.showMessageDialog("No Existe");
+			JOptionPane.showMessageDialog(null,"No Existe");
 			return;	
 		}
 		if (archivo.isFile()) {
-				
-		}else{
-
-		}
+				getContenido();
+		}else{getList();}
 	}
 }
