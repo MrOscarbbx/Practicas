@@ -27,10 +27,12 @@ public class VentanaPrincipal{
 		f.add(lblFile);
 		f.add(txtFile);
 		f.add(btnOpen);
+		btnOpen.addActionListener(openFile());
 		f.add(txtContenido);
 		f.add(lblLeidos);
 		f.add(lblN);
 		f.add(btnExit);
+		btnExit.addActionListener(dispose());
 		f.setSize(550, 440);
 		f.pack();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -39,5 +41,12 @@ public class VentanaPrincipal{
 	public static void main(String[] args) {
 		VentanaPrincipal v= new VentanaPrincipal();
 		v.initComponents();
+	}
+
+	public void openFile(){
+		String file=txtFile.getText();
+		String path= System.getProperty("user.home")+System.getProperty("file.separator")+file;
+		System.out.println(path);
+		txtContenido.setText();
 	}
 }
