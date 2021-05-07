@@ -1,6 +1,8 @@
 package mx.com.softgame.poo1game.ventanas;
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
+import java.awt.event.*;
 
 public class VentanaPrincipal{
 	JFrame f;
@@ -27,7 +29,11 @@ public class VentanaPrincipal{
 		f.add(lblFile);
 		f.add(txtFile);
 		f.add(btnOpen);
-		btnOpen.addActionListener(openFile());
+		btnOpen.addMouseListener(new MouseListener() {
+			public void mouseClick(MouseEvent e) {
+				e.openFile();
+			}
+		});
 		f.add(txtContenido);
 		f.add(lblLeidos);
 		f.add(lblN);
@@ -48,5 +54,15 @@ public class VentanaPrincipal{
 		String path= System.getProperty("user.home")+System.getProperty("file.separator")+file;
 		System.out.println(path);
 		txtContenido.setText();
+		File archivo=new File(path);
+		if (!archivo.exists()) {
+			JOptonPane.showMessageDialog("No Existe");
+			return;	
+		}
+		if (archivo.isFile()) {
+				
+		}else{
+
+		}
 	}
 }
