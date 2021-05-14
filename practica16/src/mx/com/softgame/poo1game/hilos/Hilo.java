@@ -12,7 +12,7 @@ public class Hilo extends Thread{
 		String str="";
 		for (int i=0;i<30 ;i++ ) {
 			str=etiqueta.getText();
-			char c=str.charAt(str.length());
+			char c=str.charAt(str.length()-1);
 			str+=c+"";
 			etiqueta.setText(str);
 			int n=(int)(Math.random()*1000);

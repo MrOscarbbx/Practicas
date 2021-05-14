@@ -44,7 +44,7 @@ public class VentanaHilo extends JFrame {
 		mnuArchivo.add(mnuInicio);
 		mnuArchivo.add(mnuSalir);
 		menuBar.add(mnuArchivo);
-		this.add(menuBar);
+		this.setJMenuBar(menuBar);
 		this.add(lblA);
 		this.add(lblB);
 		this.add(lblC);
@@ -60,5 +60,9 @@ public class VentanaHilo extends JFrame {
 		Hilo hil2=new Hilo("B",lblB);
 		Hilo hil3=new Hilo("C",lblC);
 		Hilo hil4=new Hilo("D",lblD);
+		hil1.start();
+		hil2.start();
+		hil3.start();
+		hil4.start();
 	}
 }
