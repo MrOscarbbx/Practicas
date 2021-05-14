@@ -15,17 +15,43 @@ public class VentanaHilo extends JFrame {
 	JLabel lblC;
 	JLabel lblD;
 	JMenu mnuArchivo;
-	JMenuItem munInicio;
+	JMenuItem mnuInicio;
 	JMenuItem mnuSalir;
 	public VentanaHilo(){
 		menuBar=new JMenuBar();
-		lblA=new JLabel("A")
-		lblB=new JLabel("B")
-		lblC=new JLabel("C")
-		lblD=new JLabel("D")
-		mnuArchivo=new JMenu("Archivo")
-		munInicio=new JMenuItem("Inicio")
-		mnuSalir=new JMenuItem("Salir")
+		lblA=new JLabel("A");
+		lblB=new JLabel("B");
+		lblC=new JLabel("C");
+		lblD=new JLabel("D");
+		mnuArchivo=new JMenu("Archivo");
+		mnuInicio=new JMenuItem("Inicio");
+		mnuSalir=new JMenuItem("Salir");
+	}
+	public void initComponents(){
+		this.setLayout(new GridLayout(4,1));
+		mnuInicio.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent a) {
+				iniciarHilos();
+			}
+		});
+		mnuSalir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent a) {
+				dispose();
+			}
+		});
+		mnuArchivo.add(mnuInicio);
+		mnuArchivo.add(mnuSalir);
+		menuBar.add(mnuArchivo);
+		this.add(menuBar);
+		this.add(lblA);
+		this.add(lblB);
+		this.add(lblC);
+		this.add(lblD);
+		this.setSize(550, 440);
+		this.pack();
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+
 	}
 
 }
